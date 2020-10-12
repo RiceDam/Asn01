@@ -5,9 +5,19 @@
 #define ASN01_PAGERANK_HPP
 
 
-class PageRank {
-private:
+#include "matrix.hpp"
 
+class PageRank: public Matrix {
+private:
+    vector<int> sums;
+    double p;
+public:
+    PageRank(vector<double> v);
+    void setImportance();
+    void setEmptyColumn();
+    void transitionM();
+    void rank();
+    friend ostream& operator <<(ostream& os, const PageRank& page);
 };
 
 

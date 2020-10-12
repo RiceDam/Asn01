@@ -12,7 +12,7 @@
 using namespace std;
 
 class Matrix {
-private:
+protected:
     int rows;
     int cols;
     vector<vector<double>> mat;
