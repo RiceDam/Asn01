@@ -1,4 +1,4 @@
-Eric Dam
-A01167623
+Eric Dam Eddy Wu
+A01167623 A01036505
 
-Not Complete
+Did not finish most of the Google Rank
