@@ -202,11 +202,11 @@ Matrix operator-(Matrix &m, const Matrix &n) {
 }
 
 Matrix &Matrix::operator*=(const Matrix &m) {
-    vector<vector<double>> temp(m.cols, vector<double>(this->cols));
     if (this->cols == m.rows) {
-        for (int i = 0; i < this->cols; i++) {
+        vector<vector<double>> temp(this->rows, vector<double>(m.cols));
+        for (int i = 0; i < this->rows; i++) {
             for (int j = 0; j < m.cols; j++) {
-                for (int k = 0; k < this->rows; k++) {
+                for (int k = 0; k < this->cols; k++) {
                     temp[i][j] += this->mat[i][k] * m.mat[k][j];
                 }
             }
